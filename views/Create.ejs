@@ -1,0 +1,17 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <Center> <h1><b>Create Account</b></h1><br><br>
+    <%
+      if (Pass==='true'){
+        %> <font color="Red">Password mismatch</Font><br><br> <%
+      }%>
+    <form style='display:inline;' action="http://localhost:8000/create/new" method="POST">
+      Name: <input type="Text" name="Name" placeholder="Enter name"><br><br>
+      Email: <input type="Text" name="Email" placeholder="Enter email"><br><br>
+      Password: <input type="Password" name="Pass1" placeholder="Enter password"><br><br>
+      Confirm Password: <input type="Password" name="Pass2" placeholder="Repeat password"><br><br>
+      <input class='btn btn-primary' type="Submit" value="Create Account"><br><br>
+    </form>
+    <button type='button' class='btn btn-primary' name="Return" onclick="location.href='http://localhost:8000/start';">Back</button>
+  </Center>
+</html>

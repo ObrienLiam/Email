@@ -1,0 +1,30 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <Center> <h1><b>Inbox</b></h1><br><br>
+    <h2>Hello <%=Name%></h2><br>
+    <form action="http://localhost:8000/inbox/delete" method="POST">
+      <table class="table-hover t" data-link="row" style="width:80%">
+          <thead>
+            <tr>
+              <th data-sortable="true"><input type="Submit" value="Delete"></th>
+              <th data-sortable="true">From</th>
+              <th data-sortable="true">Subject</th>
+              <th data-sortable="true">Date</th>
+            </tr>
+          </thead>
+          <% for(var i=0; i<data.length; i++) { %>
+
+              <tr >
+                <td><input type="checkbox" name=<%=data[i].EID %>></td>
+                <td><%=data[i].Email_From %></td>
+                <td><A href='http://localhost:8000/inbox/read/<%=data[i].EID%>'><%=data[i].Subject %></A></td>
+                <td><%=data[i].Date %></td>
+              </tr>
+
+              <%
+          }  %>
+      <table>
+    </form>
+      <br><br> <button type='button' class='btn btn-primary' name="Logout" onclick="location.href='http://localhost:8000/logout';">Logout</button>
+  </Center>
+</html>

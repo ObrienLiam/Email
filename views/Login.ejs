@@ -1,0 +1,18 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <Center> <h1><b>Login</b></h1><br><br>
+    <%
+      if (Check==='true'){
+        %> <font color="Red">Login failed</Font><br><br> <%
+      }
+      if (New==='true'){
+        %> <font color="Green">Account created</Font><br><br> <%
+      } %>
+    <form style='display:inline;' action="http://localhost:8000/login/load" method="POST">
+      Email: <input type="Text" name="Email" placeholder="Enter email"><br><br>
+      Password: <input type="Password" name="Pass" placeholder="Enter password"><br><br>
+      <input class='btn btn-primary' type="Submit" value="Login"><br><br>
+    </form>
+    <button type='button' class='btn btn-primary' name="Return" onclick="location.href='http://localhost:8000/start';">Back</button>
+  </Center>
+</html>
